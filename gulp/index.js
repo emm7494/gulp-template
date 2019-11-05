@@ -1,8 +1,8 @@
 var gulp = require("gulp");
 
-function getTask(foundTasks, currentTask) {
-  var task = require("./tasks/" + currentTask);
-  return { ...foundTasks, [currentTask]: task };
+function getTask(foundTasks, currentTaskName) {
+  var task = require("./tasks/" + currentTaskName);
+  return { ...foundTasks, [currentTaskName]: task };
 }
 
 function loadTasks(taskList) {
